@@ -16,16 +16,16 @@ Moreover you can find it in: /docs/openapi.json
 ## Run server:
 
   ```bash
-docker build -f docker/Dockerfile -t flaskapi-crud-image:0.0.1 .
-docker run -p 8000:8000 flaskapi-crud-image:0.0.1
+docker build -f docker/Dockerfile -t fastapi-crud-image:0.0.1 .
+docker run -p 8000:8000 fastapi-crud-image:0.0.1
   ```
 
 
 ## Run tests:
 
   ```bash
-docker build -f docker/Dockerfile.test -t flaskapi-crud-tests:0.0.1 .
-docker run flaskapi-crud-tests:0.0.1
+docker build -f docker/Dockerfile.test -t fastapi-crud-tests:0.0.1 .
+docker run fastapi-crud-tests:0.0.1
   ```
 
 
