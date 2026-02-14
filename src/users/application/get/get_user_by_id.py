@@ -1,0 +1,13 @@
+from sqlalchemy.orm import Session
+
+from src.users.domain.models.user import User
+from src.users.domain.repositories.user_repository import UserRepository
+
+
+class GetUserById:
+    def __init__(self, user_repository: UserRepository) -> None:
+        self.user_repository = user_repository
+
+    def __call__(self, db_session: Session, id: str) -> User:
+        user = self.user_repository.get_user_by_id(db_session, id)
+        return user

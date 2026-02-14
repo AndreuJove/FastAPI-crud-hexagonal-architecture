@@ -1,0 +1,24 @@
+[tool.black]
+line-length = 100
+
+[tool.isort]
+src_paths = ["src", "tests"]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+disallow_untyped_defs = true
+no_implicit_optional = true
+
+[tool.pylint.messages_control]
+# https://vald-phoenix.github.io/pylint-errors/
+max-line-length=100
+disable = [
+  "empty-docstring",
+  "missing-function-docstring",
+  "missing-class-docstring",
+  "missing-module-docstring",
+  "too-few-public-methods",
+  "no-name-in-module",
+  "fixme"
+]
